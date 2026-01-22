@@ -19,4 +19,4 @@ docker run -it --rm --name haproxy-acme-http01 \
     -p 80:80 \
     -p 443:443 \
     --sysctl net.ipv4.ip_unprivileged_port_start=0 \
-    flobernd/haproxy-acme-http01
+    coralhl/haproxy-acme-http01

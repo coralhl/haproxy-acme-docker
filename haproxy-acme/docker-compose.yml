@@ -1,6 +1,6 @@
 services:
   haproxy-acme:
-    image: flobernd/haproxy-acme:latest
+    image: coralhl/haproxy-acme:latest
     container_name: haproxy-acme
     restart: unless-stopped
     environment:

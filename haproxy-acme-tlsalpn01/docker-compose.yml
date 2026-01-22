@@ -1,6 +1,6 @@
 services:
   haproxy-acme:
-    image: flobernd/haproxy-acme-tlsalpn01:latest
+    image: coralhl/haproxy-acme-tlsalpn01:latest
     container_name: haproxy-acme-tlsalpn01
     restart: unless-stopped
     environment:

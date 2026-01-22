@@ -13,10 +13,10 @@ concurrency:
 
 env:
   BASE_IMAGE: haproxy:2.9-bookworm
-  REGISTRY_IMAGE_HAPROXY_ACME: localhost:5000/flobernd/haproxy-acme
-  REGISTRY_IMAGE_HAPROXY_ACME_HTTP01: localhost:5000/flobernd/haproxy-acme-http01
-  REGISTRY_IMAGE_HAPROXY_ACME_DNS01: localhost:5000/flobernd/haproxy-acme-dns01
-  REGISTRY_IMAGE_HAPROXY_ACME_TLSALPN01: localhost:5000/flobernd/haproxy-acme-tlsalpn01
+  REGISTRY_IMAGE_HAPROXY_ACME: localhost:5000/coralhl/haproxy-acme
+  REGISTRY_IMAGE_HAPROXY_ACME_HTTP01: localhost:5000/coralhl/haproxy-acme-http01
+  REGISTRY_IMAGE_HAPROXY_ACME_DNS01: localhost:5000/coralhl/haproxy-acme-dns01
+  REGISTRY_IMAGE_HAPROXY_ACME_TLSALPN01: localhost:5000/coralhl/haproxy-acme-tlsalpn01
 
 jobs:
   build:

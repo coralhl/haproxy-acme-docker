@@ -1,6 +1,7 @@
 # Docker HAProxy ACME
 
 A Docker image that combines [haproxy](https://www.haproxy.org/) and [acme.sh](https://github.com/acmesh-official/acme.sh).
+Based on [docker-haproxy-acme](https://github.com/flobernd/docker-haproxy-acme).
 
 ## Motivation
 
@@ -35,7 +36,7 @@ docker run -d --name haproxy-acme-http01 \
     -p 80:80 \
     -p 443:443 \
     --sysctl net.ipv4.ip_unprivileged_port_start=0 \
-    ghcr.io/flobernd/haproxy-acme-http01
+    ghcr.io/coralhl/haproxy-acme-http01
 ```
 
 ### Docker Compose Example
@@ -43,7 +44,7 @@ docker run -d --name haproxy-acme-http01 \
 ```yaml
 services:
   haproxy-acme:
-    image: ghcr.io/flobernd/haproxy-acme-http01:latest
+    image: ghcr.io/coralhl/haproxy-acme-http01:latest
     container_name: haproxy-acme-http01
     restart: unless-stopped
     environment:
@@ -182,7 +183,7 @@ docker run -d --name haproxy-acme-dns01 \
     -v /docker_data/acme:/var/lib/acme:rw \
     -p 80:80 \
     -p 443:443 \
-    ghcr.io/flobernd/haproxy-acme-dns01
+    ghcr.io/coralhl/haproxy-acme-dns01
 ```
 
 ### Docker Compose Example
@@ -190,7 +191,7 @@ docker run -d --name haproxy-acme-dns01 \
 ```yaml
 services:
   haproxy-acme:
-    image: ghcr.io/flobernd/haproxy-acme-dns01:latest
+    image: ghcr.io/coralhl/haproxy-acme-dns01:latest
     container_name: haproxy-acme-dns01
     restart: unless-stopped
     environment:
@@ -327,7 +328,7 @@ docker run -d --name haproxy-acme-tlsalpn01 \
     -v /docker_data/acme:/var/lib/acme:rw \
     -p 80:80 \
     -p 443:443 \
-    ghcr.io/flobernd/haproxy-acme-tlsalpn01
+    ghcr.io/coralhl/haproxy-acme-tlsalpn01
 ```
 
 ### Docker Compose Example
@@ -335,7 +336,7 @@ docker run -d --name haproxy-acme-tlsalpn01 \
 ```yaml
 services:
   haproxy-acme:
-    image: ghcr.io/flobernd/haproxy-acme-tlsalpn01:latest
+    image: ghcr.io/coralhl/haproxy-acme-tlsalpn01:latest
     container_name: haproxy-acme-tlsalpn01
     restart: unless-stopped
     environment:

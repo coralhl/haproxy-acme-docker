@@ -21,4 +21,4 @@ docker run -it --rm --name haproxy-acme-dns01 \
     -e "SERVER_PORT=80" \
     -p 8080:80 \
     -p 8443:443 \
-    flobernd/haproxy-acme-dns01
+    coralhl/haproxy-acme-dns01

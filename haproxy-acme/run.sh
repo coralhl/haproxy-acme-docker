@@ -7,4 +7,4 @@ docker run -it --rm --name haproxy-acme \
     -e "ACME_DEBUG=0" \
     -e "ACME_UPGRADE=1" \
     -e "ACME_CRON=1" \
-    flobernd/haproxy-acme
+    coralhl/haproxy-acme

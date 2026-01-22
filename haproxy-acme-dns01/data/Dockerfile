@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=flobernd/haproxy-acme:latest
+ARG BASE_IMAGE=coralhl/haproxy-acme:latest
 
 FROM $BASE_IMAGE
 
