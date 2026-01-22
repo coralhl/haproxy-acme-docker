@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  BASE_IMAGE: haproxy:2.9-bookworm
+  BASE_IMAGE: haproxy:3.2-trixie
   REGISTRY_IMAGE_HAPROXY_ACME: localhost:5000/coralhl/haproxy-acme
   REGISTRY_IMAGE_HAPROXY_ACME_HTTP01: localhost:5000/coralhl/haproxy-acme-http01
   REGISTRY_IMAGE_HAPROXY_ACME_DNS01: localhost:5000/coralhl/haproxy-acme-dns01
