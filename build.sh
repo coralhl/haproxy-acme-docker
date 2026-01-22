@@ -6,6 +6,10 @@ docker build \
     -t coralhl/haproxy-acme:latest \
     "$SCRIPT_DIR/haproxy-acme/data"
 
+# docker build \
+#     -t coralhl/haproxy-acme-http01:latest \
+#     "$SCRIPT_DIR/haproxy-acme-http01/data"
+
 docker build \
-    -t coralhl/haproxy-acme-http01:latest \
-    "$SCRIPT_DIR/haproxy-acme-http01/data"
+    -t coralhl/haproxy-acme-dns01:latest \
+    "$SCRIPT_DIR/haproxy-acme-dns01/data"
