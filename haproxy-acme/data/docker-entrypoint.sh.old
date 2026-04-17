@@ -2,27 +2,9 @@
 set -e
 
 if [ "$1" = 'daemon' ]; then
-    # Modify haproxy user UID/GID if PUID and PGID are set
-    if [ -n "${PUID}" ] && [ -n "${PGID}" ]; then
-        echo "Modifying haproxy user UID to ${PUID} and GID to ${PGID}"
-        
-        # Check if IDs differ from current ones
-        OLD_UID=$(id -u haproxy)
-        OLD_GID=$(id -g haproxy)
-        
-        if [ "${PUID}" -ne "${OLD_UID}" ] || [ "${PGID}" -ne "${OLD_GID}" ]; then
-            # Modify group and user
-            groupmod -g "${PGID}" haproxy
-            usermod -u "${PUID}" -g "${PGID}" haproxy
-        fi
-    fi
-
     # Grant 'supervisor' write access to '/dev/stdout' and '/dev/stderr'
     chmod o+w /dev/stdout
     chmod o+w /dev/stderr
-
-    chown -R haproxy:haproxy /etc/haproxy
-    chown -R haproxy:haproxy /var/lib/haproxy
 
     # Adjust permissions for 'acme' config directory
     chown -R haproxy:haproxy /var/lib/acme
